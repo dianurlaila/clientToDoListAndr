@@ -1,29 +1,26 @@
 package com.project.dian.mytodolist.fragment;
 
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 
 import com.project.dian.mytodolist.R;
 import com.project.dian.mytodolist.activity.MainActivity;
 
 
-public class LoginFragment extends Fragment {
+public class AddListFragment extends Fragment {
 
 
-    public LoginFragment() {
+    public AddListFragment() {
         // Required empty public constructor
     }
 
-
-    public static LoginFragment newInstance() {
-        LoginFragment fragment = new LoginFragment();
+    public static AddListFragment newInstance() {
+        AddListFragment fragment = new AddListFragment();
         Bundle args = new Bundle();
 
         fragment.setArguments(args);
@@ -41,21 +38,13 @@ public class LoginFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_login, container, false);
+
+        return inflater.inflate(R.layout.fragment_add_list, container, false);
     }
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        Button nav_login = view.findViewById(R.id.nav_login);
-
-        nav_login.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), MainActivity.class);
-                startActivity(intent);
-            }
-        });
+        ((MainActivity)getActivity()).getSupportActionBar().setTitle(R.string.addtodolist);
     }
 }

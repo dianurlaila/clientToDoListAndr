@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    >
+
+    <EditText
+        android:id="@+id/name_reg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nama ..."
+        android:inputType="text"
+        android:layout_marginTop="210dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/email_reg"
+        android:layout_alignStart="@+id/email_reg"
+        android:layout_alignRight="@+id/email_reg"
+        android:layout_alignEnd="@+id/email_reg" />
+
+    <EditText
+        android:id="@+id/email_reg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Email ..."
+        android:layout_centerInParent="true"
+        android:inputType="textEmailAddress"
+        android:layout_margin="16dp"
+        android:layout_below="@id/name_reg"
+        />
+
+
+    <EditText
+        android:id="@+id/pass_reg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Password ..."
+        android:layout_centerInParent="true"
+        android:inputType="textPassword"
+        android:layout_margin="16dp"
+        android:layout_below="@id/email_reg"
+        />
+
+    <EditText
+        android:id="@+id/pass_confirm_reg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Konfirmasi Password ..."
+        android:layout_centerInParent="true"
+        android:inputType="textPassword"
+        android:layout_margin="16dp"
+        android:layout_below="@id/pass_reg"
+        />
+    <Button
+        android:id="@+id/nav_register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pass_confirm_reg"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="20dp"
+        android:background="@android:color/holo_orange_light"
+        android:elevation="5dp"
+        android:text="Register"
+        android:textColor="@android:color/white"
+        android:textSize="20dp"
+        />
+
+
+
+</RelativeLayout>

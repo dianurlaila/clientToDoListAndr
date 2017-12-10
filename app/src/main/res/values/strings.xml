@@ -1,7 +1,13 @@
 <resources>
-    <string name="app_name">mytodolist</string>
-    <string name="action_settings">Settings</string>
+    <string name="app_name">My To Do List</string>
+    <string name="action_logout">Logout</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_my_list">My List</string>
+    <string name="title_add_list">Add List</string>
+    <string name="title_setting">Setting</string>
+    <string name="mytodolist">My To Do List</string>
+    <string name="addtodolist">Add New To Do List</string>
 </resources>
