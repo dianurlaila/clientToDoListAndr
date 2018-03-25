@@ -23,7 +23,6 @@ public class AuthenticationFragment extends Fragment implements View.OnClickList
         // Required empty public constructor
     }
 
-
     public static AuthenticationFragment newInstance() {
         AuthenticationFragment fragment = new AuthenticationFragment();
         Bundle args = new Bundle();
@@ -55,8 +54,6 @@ public class AuthenticationFragment extends Fragment implements View.OnClickList
         login_btn.setOnClickListener(this);
         reg_btn = view.findViewById(R.id.register_btn);
         reg_btn.setOnClickListener(this);
-
-
     }
 
     @Override

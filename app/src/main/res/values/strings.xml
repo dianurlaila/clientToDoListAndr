@@ -10,4 +10,8 @@
     <string name="title_setting">Setting</string>
     <string name="mytodolist">My To Do List</string>
     <string name="addtodolist">Add New To Do List</string>
+    <string name="cancel">Batal</string>
+    <string name="sure">Yakin</string>
+    <string name="confirmation">Konfirmasi</string>
+    <string name="suretoexit">Yakin Mau Keluar Aplikasi?</string>
 </resources>

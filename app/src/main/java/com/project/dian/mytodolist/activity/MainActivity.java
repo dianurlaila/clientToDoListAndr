@@ -1,12 +1,17 @@
 package com.project.dian.mytodolist.activity;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.AppCompatSpinner;
 import android.view.MenuItem;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import com.project.dian.mytodolist.R;
 import com.project.dian.mytodolist.fragment.AddListFragment;
 import com.project.dian.mytodolist.fragment.MyLIstFragment;
@@ -20,7 +25,6 @@ public class MainActivity extends AppCompatActivity {
     public static final int PAGE_SETTING = 2;
 
     private Fragment currentFragment;
-
 
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
@@ -74,8 +78,23 @@ public class MainActivity extends AppCompatActivity {
 
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.container_list, currentFragment)
-                .addToBackStack(null)
                 .commit();
     }
 
+
+
+    @Override
+    public void onBackPressed() {
+
+        new AlertDialog.Builder(this)
+                .setTitle(R.string.confirmation)
+                .setMessage(R.string.suretoexit)
+                .setNegativeButton(R.string.cancel,null)
+                .setPositiveButton(R.string.sure, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        MainActivity.super.onBackPressed();
+                    }
+                }).create().show();
+    }
 }
